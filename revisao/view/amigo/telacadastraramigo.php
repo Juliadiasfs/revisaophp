@@ -7,13 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-<form action="../../model/produto/inserirproduto.php" method="POST">
-        Produto:<br/>
-        <input type="text" name="cxproduto"/><br/>
-        Fabricante:<br/>
-        <input type="text" name="cxfabricante"/><br/>
-        Valor:<br/>
-        <input type="text" name="cxvalor"/><br/>
+<form action="../../model/amigo/inseriramigo.php" method="POST">
+        Amigo:<br/>
+        <input type="text" name="cxamigo"/><br/>
+        Aplelido:<br/>
+        <input type="text" name="cxapelido"/><br/>
+        Email:<br/>
+        <input type="text" name="cxemail"/><br/>
         <input type="submit" value="Gravar">
 </form>
 

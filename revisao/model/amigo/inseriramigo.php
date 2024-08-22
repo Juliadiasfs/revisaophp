@@ -1,11 +1,11 @@
 <?php
-if($_POST["cxproduto"] != "")
+if($_POST["cxamigo"] != "")
   {
     include_once "../../factory/conexao.php";
-    $produto = $_POST["cxproduto"];
-    $fabricante = $_POST["cxfabricante"];
-    $valor = $_POST["cxvalor"];
-    $sql = "insert into tbprodutos(produto,fabricante,valor)values('$produto','$fabricante','$valor')";
+    $amigo = $_POST["cxamigo"];
+    $apelido = $_POST["cxapelido"];
+    $email = $_POST["cxemail"];
+    $sql = "insert into tbamigos (amigo,apelido,email)values('$amigo','$apelido','$email')";
     $executar = mysqli_query($caminho,$sql);
     echo "
     <script>

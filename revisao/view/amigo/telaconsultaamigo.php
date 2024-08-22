@@ -7,12 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-<form action="../../model/produto/consultanome.php" method="POST">
-        Digite o nome do produto:<br/>
+<form action="../../model/amigo/consultaamigo.php" method="POST">
+        Digite o nome do amigo:<br/>
         <input type="text" name="cxpesquisa">
         <input type="submit" value="Pesquisar">
 </form>
-
-
 </body>
 </html>

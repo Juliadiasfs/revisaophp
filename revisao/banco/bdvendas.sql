@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15-Ago-2024 às 21:17
+-- Tempo de geração: 22-Ago-2024 às 23:30
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.0.19
 
@@ -24,10 +24,30 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbproduto`
+-- Estrutura da tabela `tbamigos`
 --
 
-CREATE TABLE `tbproduto` (
+CREATE TABLE `tbamigos` (
+  `codigo` int(11) NOT NULL,
+  `amigo` varchar(90) DEFAULT NULL,
+  `apelido` varchar(90) DEFAULT NULL,
+  `email` varchar(80) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `tbamigos`
+--
+
+INSERT INTO `tbamigos` (`codigo`, `amigo`, `apelido`, `email`) VALUES
+(1, 'amanda', 'amanda', 'amanda');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbprodutos`
+--
+
+CREATE TABLE `tbprodutos` (
   `codigo` int(11) NOT NULL,
   `produto` varchar(90) NOT NULL,
   `fabricante` varchar(50) NOT NULL,
@@ -35,13 +55,27 @@ CREATE TABLE `tbproduto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Extraindo dados da tabela `tbprodutos`
+--
+
+INSERT INTO `tbprodutos` (`codigo`, `produto`, `fabricante`, `valor`) VALUES
+(2, 'a', 'a', '1'),
+(3, 'sla', 'bruna', '1');
+
+--
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `tbproduto`
+-- Índices para tabela `tbamigos`
 --
-ALTER TABLE `tbproduto`
+ALTER TABLE `tbamigos`
+  ADD PRIMARY KEY (`codigo`);
+
+--
+-- Índices para tabela `tbprodutos`
+--
+ALTER TABLE `tbprodutos`
   ADD PRIMARY KEY (`codigo`);
 
 --
@@ -49,10 +83,16 @@ ALTER TABLE `tbproduto`
 --
 
 --
--- AUTO_INCREMENT de tabela `tbproduto`
+-- AUTO_INCREMENT de tabela `tbamigos`
 --
-ALTER TABLE `tbproduto`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `tbamigos`
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `tbprodutos`
+--
+ALTER TABLE `tbprodutos`
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
